@@ -7,18 +7,14 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+
 
 class ArtistSearchVC: UIViewController {
     
-    let disposeBag = DisposeBag()
+   
     @IBOutlet weak var tableView: UITableView!
     
-    var artistViewModel =  ArtistListViewModel(artist: []) {
-        didSet {
-        }
-    }
+    var artistViewModel =  ArtistListViewModel(artist: [])
     override func viewDidLoad() {
        
         super.viewDidLoad()
@@ -57,10 +53,12 @@ extension ArtistSearchVC : UITableViewDelegate , UITableViewDataSource
            guard let imageURL = artist.imageURL else {return cell}
             
         
-            cell.detailTextLabel?.text = artist.url
-            cell.textLabel?.text = artist.name
         
-        cell.imageView?.image = nil
+            cell.textLabel?.text = artist.name
+            cell.textLabel?.font = UIFont(name: "Chalkboard SE", size: 16)
+            cell.backgroundColor = UIColor.black
+            cell.textLabel?.textColor = UIColor.white
+            cell.imageView?.image = nil
         
         ImageManger.shared.fetchImage(imageURL) { (image) in
             DispatchQueue.main.async {
@@ -70,23 +68,14 @@ extension ArtistSearchVC : UITableViewDelegate , UITableViewDataSource
             
         }
         
-        
-            cell.textLabel?.font = UIFont(name: "Chalkboard SE", size: 16)
-            cell.detailTextLabel?.font = UIFont(name: "Chalkboard SE", size: 17)
-            cell.backgroundColor = UIColor.black
-            cell.textLabel?.textColor = UIColor.white
-            cell.detailTextLabel?.textColor = UIColor.white
-            
-            // Clear the ImageView incase we reuse it
-       
+ 
             
             return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
         
-       
- return "Artist"
+        return "Artist"
 
         
     }

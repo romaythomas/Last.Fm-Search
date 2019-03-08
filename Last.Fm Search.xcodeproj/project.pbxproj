@@ -31,6 +31,10 @@
 		EBB5782E2231606C000D31E3 /* AlbumDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB5782D2231606C000D31E3 /* AlbumDetailVC.swift */; };
 		EBB5783022316081000D31E3 /* TrackDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB5782F22316081000D31E3 /* TrackDetailVC.swift */; };
 		EBB578322231ADD6000D31E3 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB578312231ADD6000D31E3 /* ImageManager.swift */; };
+		EBB578342232124A000D31E3 /* ArtistListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB578332232124A000D31E3 /* ArtistListViewModelTest.swift */; };
+		EBB5783622321555000D31E3 /* AlbumListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB5783522321555000D31E3 /* AlbumListViewModelTest.swift */; };
+		EBB5783822321577000D31E3 /* TrackListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB5783722321577000D31E3 /* TrackListViewModelTest.swift */; };
+		EBB5783A2232189A000D31E3 /* APISearchResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB578392232189A000D31E3 /* APISearchResponseTest.swift */; };
 		FF55C5A129754405F98906B8 /* Pods_Last_Fm_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1964CBC40C07310A4432A97D /* Pods_Last_Fm_Search.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +80,10 @@
 		EBB5782D2231606C000D31E3 /* AlbumDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailVC.swift; sourceTree = "<group>"; };
 		EBB5782F22316081000D31E3 /* TrackDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailVC.swift; sourceTree = "<group>"; };
 		EBB578312231ADD6000D31E3 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		EBB578332232124A000D31E3 /* ArtistListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListViewModelTest.swift; sourceTree = "<group>"; };
+		EBB5783522321555000D31E3 /* AlbumListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModelTest.swift; sourceTree = "<group>"; };
+		EBB5783722321577000D31E3 /* TrackListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModelTest.swift; sourceTree = "<group>"; };
+		EBB578392232189A000D31E3 /* APISearchResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISearchResponseTest.swift; sourceTree = "<group>"; };
 		F1296F9DD82E43B4E40F3AD3 /* Pods-Last.Fm Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Last.Fm Search.debug.xcconfig"; path = "Target Support Files/Pods-Last.Fm Search/Pods-Last.Fm Search.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +154,6 @@
 				EBB577E822305A4B000D31E3 /* AppDelegate.swift */,
 				EBB577EF22305A4D000D31E3 /* Assets.xcassets */,
 				EBB5780E22305BE2000D31E3 /* StroyBoard */,
-				EBB5780D22305BCD000D31E3 /* Uitls */,
 				EBB5780C22305B95000D31E3 /* Model */,
 				EBB5780B22305B7A000D31E3 /* Controller */,
 				EBB5780A22305B6B000D31E3 /* ViewModel */,
@@ -160,6 +167,10 @@
 			isa = PBXGroup;
 			children = (
 				EBB577FD22305A4E000D31E3 /* Last_Fm_SearchTests.swift */,
+				EBB578392232189A000D31E3 /* APISearchResponseTest.swift */,
+				EBB578332232124A000D31E3 /* ArtistListViewModelTest.swift */,
+				EBB5783722321577000D31E3 /* TrackListViewModelTest.swift */,
+				EBB5783522321555000D31E3 /* AlbumListViewModelTest.swift */,
 			);
 			path = "Last.Fm SearchTests";
 			sourceTree = "<group>";
@@ -215,13 +226,6 @@
 				EBB57811223077A7000D31E3 /* Artist.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		EBB5780D22305BCD000D31E3 /* Uitls */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Uitls;
 			sourceTree = "<group>";
 		};
 		EBB5780E22305BE2000D31E3 /* StroyBoard */ = {
@@ -436,7 +440,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB5783A2232189A000D31E3 /* APISearchResponseTest.swift in Sources */,
+				EBB5783822321577000D31E3 /* TrackListViewModelTest.swift in Sources */,
+				EBB5783622321555000D31E3 /* AlbumListViewModelTest.swift in Sources */,
 				EBB577FE22305A4E000D31E3 /* Last_Fm_SearchTests.swift in Sources */,
+				EBB578342232124A000D31E3 /* ArtistListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

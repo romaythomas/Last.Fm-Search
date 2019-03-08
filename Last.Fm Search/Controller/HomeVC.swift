@@ -12,11 +12,10 @@ import RxSwift
 
 class HomeVC: UIViewController {
     
+    
     // MARK: - Properties
-    // MARK: - Outlets
-    // MARK: - Life Cycle
-    // MARK: - Methods
-    // MARK: - Properties
+    
+   
     
     var task: URLSessionDataTask?
     let disposeBag = DisposeBag()
@@ -75,6 +74,10 @@ class HomeVC: UIViewController {
         searchItems()
         setupTableView()
         
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     
@@ -267,14 +270,12 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource
             guard let imageURL = artist.imageURL else {return cell}
             
            
-            cell.detailTextLabel?.text = "Artist"
+           
             cell.textLabel?.text = artist.name
             cell.textLabel?.font = UIFont(name: "Chalkboard SE", size: 16)
-            cell.detailTextLabel?.font = UIFont(name: "Chalkboard SE", size: 17)
             cell.backgroundColor = UIColor.black
             cell.textLabel?.textColor = UIColor.white
-            cell.detailTextLabel?.textColor = UIColor.white
-            
+
             // Clear the ImageView incase we reuse it
             cell.imageView?.image = nil
             
@@ -320,7 +321,9 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource
             let track = trackViewModel.topSearches[indexPath.row]
             guard let imageURL = track.imageURL else {return cell}
             cell.textLabel?.text = track.name
-            cell.detailTextLabel?.text = track.artist
+            cell.textLabel?.font = UIFont(name: "Chalkboard SE", size: 16)
+            cell.backgroundColor = UIColor.black
+            cell.textLabel?.textColor = UIColor.white
          
             
             ImageManger.shared.fetchImage(imageURL) { (image) in
@@ -331,11 +334,8 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource
                 
             }
             
-            cell.textLabel?.font = UIFont(name: "Chalkboard SE", size: 16)
-            cell.detailTextLabel?.font = UIFont(name: "Chalkboard SE", size: 17)
-            cell.backgroundColor = UIColor.black
-            cell.textLabel?.textColor = UIColor.white
-            cell.detailTextLabel?.textColor = UIColor.white
+           
+        
             
             
             return cell
@@ -345,8 +345,6 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource
             
             cell.backgroundColor = UIColor.black
             cell.textLabel?.textColor = UIColor.white
-            cell.detailTextLabel?.textColor = UIColor.white
-            
             
             cell.viewAllArtistButton.addTarget(self, action: #selector( self.viewAllArtistButtonClicked(sender:)), for: UIControl.Event.touchUpInside)
             

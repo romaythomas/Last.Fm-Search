@@ -9,15 +9,10 @@
 import UIKit
 
 class AlbumSearchVC: UIViewController {
+   
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    var albumViewModel = AlbumsListViewModel(albums: [] ){
-        didSet {
-         
-            
-        }
-    }
+ 
+    var albumViewModel = AlbumsListViewModel(albums: [] )
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,8 +57,6 @@ extension AlbumSearchVC : UITableViewDelegate , UITableViewDataSource
        
         
         cell.textLabel?.text = album.name
-        cell.detailTextLabel?.text = album.artist
-        
         cell.imageView?.image = nil
         
         ImageManger.shared.fetchImage(imageURL) { (image) in
@@ -75,10 +68,8 @@ extension AlbumSearchVC : UITableViewDelegate , UITableViewDataSource
         }
         
         cell.textLabel?.font = UIFont(name: "Chalkboard SE", size: 16)
-        cell.detailTextLabel?.font = UIFont(name: "Chalkboard SE", size: 17)
         cell.backgroundColor = UIColor.black
         cell.textLabel?.textColor = UIColor.white
-        cell.detailTextLabel?.textColor = UIColor.white
        
         
         return cell
