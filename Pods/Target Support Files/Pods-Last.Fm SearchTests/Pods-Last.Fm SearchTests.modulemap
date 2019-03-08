@@ -1,0 +1,6 @@
+framework module Pods_Last_Fm_SearchTests {
+  umbrella header "Pods-Last.Fm SearchTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
