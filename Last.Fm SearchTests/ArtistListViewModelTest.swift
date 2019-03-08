@@ -23,8 +23,8 @@ class ArtistListViewModelTest: XCTestCase {
     
     private func getMockAlbum() -> Album {
  
-       // https://www.last.fm/music/Imagine+Dragons/_/Believer
-        return Album(name: "Test", artist: "Json Drulo", mbid: "23", url: "https://www.last.fm/music/Cher/_/Believe", streamable: "0", image: [])
+     
+        return Album(name: "Test", artist: "Json Drulo", mbid: "32ca187e-ee25-4f18-b7d0-3b6713f24635", url: "https://www.last.fm/music/Cher/_/Believe", streamable: "0", image: [])
         
     }
     
