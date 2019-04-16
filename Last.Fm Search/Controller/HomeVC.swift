@@ -14,6 +14,7 @@ class HomeVC: UIViewController {
     
     
     // MARK: - Properties
+    var test : String?
     
    
     
