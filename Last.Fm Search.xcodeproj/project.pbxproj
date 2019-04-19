@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -127,6 +127,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EB5CB255226A378B00B0A8FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EB5CB256226A379900B0A8FE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		EBB577DC22305A4B000D31E3 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +164,8 @@
 		EBB577E722305A4B000D31E3 /* Last.Fm Search */ = {
 			isa = PBXGroup;
 			children = (
+				EB5CB256226A379900B0A8FE /* Protocol */,
+				EB5CB255226A378B00B0A8FE /* Extensions */,
 				EBB577F422305A4D000D31E3 /* Info.plist */,
 				EBB577E822305A4B000D31E3 /* AppDelegate.swift */,
 				EBB577EF22305A4D000D31E3 /* Assets.xcassets */,
